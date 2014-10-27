@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="imagehelper" version="0.2.3">
+    <name>Image Helper</name>
+    <author>quanvo3forcom</author>
+    <description>Cordova iOS image helper library</description>
+    <keywords>cordova, image, photos</keywords>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/imagehelper.js" name="ImageHelper">
+        <clobbers target="imagehelper" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ImageHelper">
+                <param name="ios-package" value="ImageHelper" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ImageHelper.h" />
+        <source-file src="src/ios/ImageHelper.m" />
+    </platform>
+</plugin>
